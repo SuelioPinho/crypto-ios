@@ -10,8 +10,7 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .topTrailing, endPoint: .center)
-                            .edgesIgnoringSafeArea(.all)
+            AppColor.background.edgesIgnoringSafeArea(.all)
             VStack {
                 Image("slash_icon")
                     .resizable()

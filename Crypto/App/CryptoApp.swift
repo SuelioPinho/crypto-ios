@@ -11,7 +11,15 @@ import SwiftUI
 struct CryptoApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            LoginView().onAppear {
+                // A lógica para imprimir as fontes
+                for familyName in UIFont.familyNames {
+                    print("Family: \(familyName)")
+                    for fontName in UIFont.fontNames(forFamilyName: familyName) {
+                        print("    Font: \(fontName)")
+                    }
+                }
+            }
         }
     }
 }
